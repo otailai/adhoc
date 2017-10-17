@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewpoint" content="width=device-width, initial-scale=1">
+    <title>Ad-hoc</title>
+    <link rel="stylesheet" type=text/css href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type=text/css href="css/index.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<!--Navigation Header-->
+<div id="navigation">
+    <nav class="navbar navbar-collapse">
+        <div class="container-fluid">
+            <div class="navbar-hearder">
+                <a href="" class=navbar-brand>
+                    <img src="resource/navibar.png" height=33 width=44 alt="Brand">
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--Legal Regulation Search Area-->
+    <div id="legalregulation" class="container-fluid" data-spy="affix" data-offset-top="800">
+        <form class="form-inline">
+            <div class="form-group">
+                <label for="inputLegalRegulation">Legal Regulation</label>
+                <select class="form-control" id="inputLegalRegulation">
+                    <!--List all supported legal regulations-->
+                    <option value="splus">SPLUS</option>
+                    <option value="splde">SPLDE</option>
+                    <option value="splcn">SPLCN</option>
+                </select>
+            </div>
+        </form>
+    </div>
+<!--Name Information Search Area-->
+    <div id="name" class=container-fluid data-spy="affix" data-offset-top="800">
+        <form class="form-inline" method=post>
+            <div class="form-group">
+                <label for="titleCriteria" id="titleLabel">Title</label>
+                <select id="title" class="form-control">
+                    <option value="">Mr.</option>
+                    <option value="">Ms.</option>
+                    <option value="">Company</option>
+                </select>
+                <div class="form-group">
+                    <label for="nameCriteria" id="nameLabel">Name</label>
+                    <input type="text" id="name" class=form-control>
+                </div>
+            </div>
+        </form>
+    </div>
+<!--Address Search Area-->
+    <div id="address" class=container-fluid data-spy="affix" data-offset-top="800">
+        <form method=post class="form-inline">
+            <div class="form-group">
+                <label for="housenoCriteria" id="housenoLabel">House no.</label>
+                <input type="text" id="houseno" class="form-control">
+                <label for="streetCriteria" id="streetLabel">Street</label>
+                <input type="text" id="street" class="form-control">
+                <label for="postcodeCriteria" id="postcodeLabel">Post Code</label>
+                <input type="text" id="postcode" class="form-control">
+                <br>
+                <label for="cityCriteria" id="cityLabel">City</label>
+                <input type="text" id="city" class="form-control">
+                <label for="regionCriteria" id="regionLabel">Region</label>
+                <input type="text" id="region" class="form-control">
+                <label for="countryCriteria" id="countryLabel">Country</label>
+                <input type="text" id="country" class="form-control">
+                <br>
+                <label for="buildingCriteria" id="buildingLabel">Building</label>
+                <input type="text" id="building" class="form-control">
+                <label for="roomnoCriteria" id="roomnoLabel">Room no.</label>
+                <input type="text" id="roomno" class="form-control">
+            </div>
+        </form>
+    </div>
+<!--PO information Search Area-->
+    <div id="po" class=container-fluid data-spy="affix" data-offset-top="800">
+        <form method="post" class="form-inline">
+            <label for="pocountryCriteria" id="pocountryLabel">PO Country</label>
+            <input type="text" id="pocountry" class="form-control">
+            <label for="poregionCriteria" id="poregionLabel">PO Region</label>
+            <input type="text" id="poregion" class="form-control">
+            <label for="pocityCriteria" id="pocityLabel">PO City</label>
+            <input type="text" id="pocity" class="form-control">
+        </form>
+    </div>
+<!--Screen button-->
+    <div id="tail" class="container-fluid">
+        <button type=button class="btn btn-info">Screen</button>
+    </div>
+</body>
+</html>

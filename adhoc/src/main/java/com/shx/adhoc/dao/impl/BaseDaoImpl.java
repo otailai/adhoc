@@ -1,6 +1,7 @@
 package com.shx.adhoc.dao.impl;
 
 import java.io.Serializable;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -84,7 +85,13 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
     
 	public List<T> findAll(String hql, Map<String, Object> params) {
 		// TODO Auto-generated method stub
-		return null;
+		Query query = this.getCurrentSession().createQuery(hql);
+		if (params != null && !params.isEmpty()) {
+			for (String key : params.keySet()) {
+				query.setParameter(key, params.get(key));
+			}
+		}
+		return query.list();
 	}
 
 	public List<T> findAll(String hql, int page, int rows) {
